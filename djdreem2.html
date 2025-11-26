@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ DREEM | Alquiler High-End Murcia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* RESET Y ESTILOS BÁSICOS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body,
+        html {
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        /* VIDEO DE FONDO */
+        .video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            object-fit: cover;
+        }
+
+        /* CAPA OSCURA (Para que se lea el texto) */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -90;
+        }
+
+        /* CONTENEDOR PRINCIPAL - EFECTO CRISTAL */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .badge {
+            background: linear-gradient(45deg, #ff357a, #fff172);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: black;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(255, 53, 122, 0.5);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        /* TIPOGRAFÍA */
+        h1 {
+            font-weight: 800;
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        h2 {
+            font-weight: 300;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        .specs {
+            text-align: left;
+            margin-bottom: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .specs li {
+            list-style: none;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .specs span {
+            color: #4CAF50;
+            /* Verde neón */
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #FFD700;
+            /* Dorado */
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        /* FORMULARIO */
+        input,
+        select {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 5px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #FFD700;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: white;
+            color: black;
+            font-weight: 800;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-text {
+            margin-top: 15px;
+            font-size: 0.7rem;
+            opacity: 0.6;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .glass-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <video autoplay muted loop playsinline class="video-background">
+        <source
+            src="video/video.mp4"
+            type="video/mp4">
+        Tu navegador no soporta video HTML5.
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+        <div class="glass-card">
+            <div class="badge">🔥 Solo 1 Set Disponible</div>
+            <header>
+                <h1>DJ DREEM</h1>
+                <h2>La Cabina Definitiva. Ahora en Murcia.</h2>
+            </header>
+
+            <div class="specs">
+                <ul>
+                    <li><span>&#10003;</span> 1x Mixer Pioneer <strong>DJM-V10</strong> (6 Canales)</li>
+                    <li><span>&#10003;</span> 2x Reproductores <strong>CDJ-3000</strong></li>
+                    <li><span>&#10003;</span> Cableado Link Certificado (Sin latencia)</li>
+                    <li><span>&#10003;</span> Entrega y Montaje Incluido</li>
+                </ul>
+            </div>
+
+            <p class="price">Desde 350€ / Jornada</p>
+
+            <form action="https://formspree.io/f/myzarjzl" method="POST">
+                <input type="text" name="nombre" placeholder="Tu Nombre o Empresa" required>
+                <input type="email" name="email" placeholder="Email de contacto" required>
+                <input type="text" name="fecha" placeholder="Fecha del Evento" onfocus="(this.type='date')"
+                    onblur="(this.type='text')">
+                <button type="submit">Consultar Disponibilidad</button>
+            </form>
+
+            <p class="footer-text">
+                Al enviar tus datos aceptas ser contactado para recibir presupuesto.
+                Tus datos están seguros con nosotros.
+            </p>
+        </div>
+    </div>
+    
+    </body>
+
+</html>
